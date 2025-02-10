@@ -1,0 +1,149 @@
+.container {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6rem;
+
+}
+
+.container-body {
+    width: 70%;
+    display: flex;
+}
+
+.body {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+
+.tittle {
+    color: white;
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.tittle img {
+    width: 40px;
+    height: 40px;
+}
+
+.list-projects {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    background-color: black;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.container-project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 15rem;
+}
+
+.container-project .items-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(78, 76, 76);
+    border-radius: 10px 10px 0 0;
+
+}
+
+.container-project .items-2 h4 {
+    background-color: transparent;
+    color: white;
+    padding: 20px;
+}
+
+.container-project .items-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container-project .items-1 ul {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    width: 100%;
+    background-color: rgb(78, 76, 76);
+    border-radius: 0 0 10px 10px;
+}
+
+.container-project .items-1 ul li {
+    list-style: none;
+    background-color: transparent;
+}
+
+.container-project .items-1 ul li img {
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+}
+
+@media (max-width: 768px) {
+
+    .tittle {
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+    
+    }
+
+    .tittle img {
+        width: 30px;
+        height: 30px;
+    }
+
+    
+    .body {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .container-project {
+        display: flex;
+        justify-content: space-between;
+        height: 15rem;
+        border-radius: 20px;
+    }
+
+
+    .list-projects {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .container-project .items-1 {
+        height: 2rem;
+    }
+
+    .container-project .items-2 {
+        height: 2rem;
+    }
+
+    .container-project .items-2 h4 {
+        font-size: 12px;
+    }
+
+    .container-project .items-1 ul li img {
+        width: 15px;
+        height: 15px;
+    }
+}

@@ -1,0 +1,84 @@
+.container {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.body {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tittle {
+    color: white;
+    font-size: 20px;
+}
+
+.container-habilites {
+    border-radius: 20px;
+    background-color: black;
+    width: 100%;
+    height: auto;
+}
+
+.container-habilites ul li img {
+    background-color: transparent;
+    width: 60px;
+    height: 60px;
+}
+
+.container-habilites ul li {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: transparent;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 0;
+}
+
+.container-habilites ul li span {
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
+}
+
+.container-habilites ul {
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+
+    .body {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .tittle {
+        color: white;
+        font-size: 15px;
+    }
+
+    .container-habilites ul {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 5px;
+    }
+
+    .container-habilites ul li img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .container-habilites ul li span {
+        font-size: 12px;
+    }
+    
+}
