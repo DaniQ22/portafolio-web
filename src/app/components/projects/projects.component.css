@@ -49,7 +49,34 @@
     flex-direction: column;
     justify-content: space-between;
     height: 15rem;
+    position: relative;
 }
+
+.image-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+    background-color: red;
+}
+
+
+
+.image-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.items-1, .items-2 {
+    position: relative;
+    z-index: 1;
+}
+
 
 .container-project .items-2 {
     display: flex;
@@ -100,7 +127,7 @@
         font-size: 18px;
         display: flex;
         align-items: center;
-    
+
     }
 
     .tittle img {
@@ -108,7 +135,7 @@
         height: 30px;
     }
 
-    
+
     .body {
         width: 100%;
         padding: 20px;
