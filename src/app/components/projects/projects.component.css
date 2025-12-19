@@ -45,11 +45,19 @@
 }
 
 .container-project {
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 15rem;
     position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: scale(1.01);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
 }
 
 .image-background {
@@ -72,7 +80,8 @@
 }
 
 
-.items-1, .items-2 {
+.items-1,
+.items-2 {
     position: relative;
     z-index: 1;
 }

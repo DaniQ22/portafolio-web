@@ -1,4 +1,6 @@
 <div class="container">
+
+
     <div class="body">
         <div class="tittle">
             <img src="assets/icons/codigo.png" alt="">
@@ -7,48 +9,28 @@
 
         <div class="list-projects">
 
-            <div class="container-project">
-                <div class="image-background">
-                    <img src="assets/images/portafolio.png" alt="">
+            <div class="container-project" *ngFor="let project of projects" (click)="openProject(project.url)">
+
+                <!-- Imagen si existe -->
+                <div class="image-background" *ngIf="project.image">
+                    <img [src]="project.image" alt="">
                 </div>
+
+                <!-- Lista de iconos -->
                 <div class="items-1">
                     <ul>
-                        <li>
-                            <img src="assets/icons/angular.svg" alt="">
+                        <li *ngFor="let icon of project.icons">
+                            <img [src]="icon" alt="">
                         </li>
                     </ul>
                 </div>
+
                 <div class="items-2">
-                    <h4>Mi Portafolio</h4>
+                    <h4>{{ project.title }}</h4>
                 </div>
+
             </div>
-
-            <div class="container-project">
-                <div class="items-1">
-                    <ul>
-                        <li>
-                            <img src="assets/icons/angular.svg" alt="">
-                        </li>
-
-                        <li>
-                            <img src="assets/icons/spring.svg" alt="">
-                        </li>
-
-                        <li>
-                            <img src="assets/icons/postgresql.svg" alt="">
-                        </li>
-
-
-                    </ul>
-                </div>
-                <div class="items-2">
-                    <h4>Nube de imagenes</h4>
-                </div>
-            </div>
-
 
         </div>
-
-
     </div>
 </div>
