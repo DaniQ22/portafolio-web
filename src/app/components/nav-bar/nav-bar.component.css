@@ -1,14 +1,11 @@
 .nav-bar {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     display: flex;
     align-content: center;
     justify-content: center;
     margin-bottom: 100px;
     padding: 20px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
 
 }
 
@@ -92,7 +89,8 @@
 @media (max-width: 768px) {
     .nav-bar {
         justify-content: flex-end;
-        margin-bottom: 30px;
+        padding: 15px;
+        z-index: 1000;
     }
 
     .hamburger {
@@ -101,29 +99,27 @@
     }
 
     .nav-bar ul {
-        display: none;
         position: absolute;
-        top: 30px;
+        top: 70px;
         left: 50%;
         transform: translateX(-50%) translateY(-10px);
         width: 90%;
         flex-direction: column;
         background-color: #1a1a1a;
         padding: 20px;
-        border-radius: 15px;
+        border-radius: 20px;
         opacity: 0;
-        gap: 15px;
-        transition: transform 0.3s ease, opacity 0.3s ease;
-
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
     .nav-bar ul.active {
-        display: flex;
         opacity: 1;
+        pointer-events: auto;
         transform: translateX(-50%) translateY(0);
     }
 
-    .nav-menu li {
+    .nav-bar ul li {
         width: 100%;
         text-align: center;
     }
